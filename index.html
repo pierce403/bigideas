@@ -1,0 +1,48 @@
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Big Idea Chart</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+ 
+</head>
+
+<body ng-app="examples">
+
+	<br/>
+<div class="container"></div>
+<div id="container" class="container">
+  <div class="row" ng-controller="StackedBarCtrl">
+    <div class="col-lg-6 col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Big Idea Chart - NOT REAL DATA YET!</div>
+        <div class="panel-body">
+          <canvas class="chart chart-bar" chart-data="data" chart-labels="labels"
+				  chart-options="options" chart-series="series"></canvas>
+				  
+				  <p>Healthcare: {{healthcareSlider.value}}</p>
+				  <rzslider rz-slider-model="healthcareSlider.value" rz-slider-options="healthcareSlider.options"></rzslider>
+
+				  <p>Education: {{educationSlider.value}}</p>
+				  <rzslider rz-slider-model="educationSlider.value" rz-slider-options="educationSlider.options"></rzslider>
+
+				  <p>Military: {{militarySlider.value}}</p>
+				  <rzslider rz-slider-model="militarySlider.value" rz-slider-options="militarySlider.options"></rzslider>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link href="css/rzslider.css" rel="stylesheet"  />
+
+<script src="js/angular.js"></script>
+<script src="js/ui-bootstrap-tpls.min.js"></script>
+<script src="js/Chart.js"></script>
+<script src="js/angular-chart.js"></script>
+<script src="js/rzslider.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
